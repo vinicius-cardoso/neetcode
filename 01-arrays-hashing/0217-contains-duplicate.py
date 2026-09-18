@@ -1,6 +1,8 @@
 """
 217. Contains Duplicate  (Easy)
-https://leetcode.com/problems/contains-duplicate/
+
+https://neetcode.io/problems/duplicate-integer/question?list=neetcode150
+https://leetcode.com/problems/contains-duplicate/description/
 
 Problem: return True if any value in the array appears at least twice.
 
@@ -13,28 +15,28 @@ Approach: hash set.
 Time:  O(n)  — one pass, set add/lookup are O(1) average
 Space: O(n)  — the set holds up to n values
 
-Note to self: my first instinct was the nested loop comparing every
-pair, which is O(n^2). The signal to reach for a set is the phrase
-"have I seen this before?" — whenever the question is about
-*membership* rather than order or position, a set is the answer.
+Note to self: my first instinct was just convert nums list to a set and compare 
+the size of the list and set, but it will cost more memory, given that this 
+solution will copy all the list.
 """
 
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        seen = set()
 
-def contains_duplicate(nums: list[int]) -> bool:
-    seen = set()
+        for num in nums:
+            if num in seen:
+                return True
+            seen.add(num)
 
-    for num in nums:
-        if num in seen:  # membership check is the whole trick
-            return True
-        seen.add(num)
-
-    return False
-
+        return False
 
 if __name__ == "__main__":
-    assert contains_duplicate([1, 2, 3, 1]) is True
-    assert contains_duplicate([1, 2, 3, 4]) is False
-    assert contains_duplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]) is True
-    assert contains_duplicate([]) is False   # edge: empty
-    assert contains_duplicate([1]) is False  # edge: single element
+    s = Solution()
+
+    assert s.hasDuplicate([1,2,3,]) is False
+    assert s.hasDuplicate([1,2,3,1]) is True
+    assert s.hasDuplicate([]) is False
+    assert s.hasDuplicate([1]) is False
+
     print("passed")
