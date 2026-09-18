@@ -13,16 +13,22 @@ Space: O(?)  — <why>
 
 Note to self: <the approach you tried first and why it was wrong, plus
 the signal in the problem statement that should have pointed you to the
-right pattern. Write this AFTER solving. This is the part you reread.>
+right pattern. Write this AFTER solving — it's the part you reread.>
 """
 
 
-def solution() -> None:
-    pass
+class Solution:
+    def methodName(self, arg: list[int]) -> bool:
+        """Keep the exact signature NeetCode/LeetCode gives you."""
+        pass
 
 
 if __name__ == "__main__":
-    # assert solution(...) == expected
-    # assert solution([]) == expected      # edge: empty
-    # assert solution([1]) == expected     # edge: single element
+    s = Solution()
+
+    # assert s.methodName([...]) is True
+    # assert s.methodName([...]) is False
+    # assert s.methodName([]) is False     # edge: empty
+    # assert s.methodName([1]) is False    # edge: single element
+
     print("passed")

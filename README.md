@@ -20,6 +20,10 @@ Every file is self-verifying: the `__main__` block holds `assert` statements
 covering the examples plus the empty and single-element edge cases. No test
 framework, no dependencies.
 
+Start each problem by copying `example.py`, which keeps the `class Solution`
+shape NeetCode's editor gives you, so the same file pastes back into the
+platform unchanged.
+
 ```bash
 python3 01-arrays-hashing/0217-contains-duplicate.py   # one problem
 ./run-all.sh                                           # everything
