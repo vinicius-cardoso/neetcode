@@ -4,7 +4,8 @@
 https://neetcode.io/problems/duplicate-integer/question?list=neetcode150
 https://leetcode.com/problems/contains-duplicate/description/
 
-Problem: return True if any value in the array appears at least twice.
+Problem: Given an integer array nums, return true if any value appears more 
+than once in the array, otherwise return false.
 
 Approach: hash set.
     Sorting first would work and needs no extra memory, but it costs
@@ -20,6 +21,7 @@ the size of the list and set, but it will cost more memory, given that this
 solution will copy all the list.
 """
 
+
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
         seen = set()
@@ -30,6 +32,7 @@ class Solution:
             seen.add(num)
 
         return False
+
 
 if __name__ == "__main__":
     s = Solution()
