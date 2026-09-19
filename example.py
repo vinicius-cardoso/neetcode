@@ -1,8 +1,10 @@
 """
 <NUMBER>. <Problem Title>  (<Easy|Medium|Hard>)
+
+https://neetcode.io/problems/<slug>/question?list=neetcode150
 https://leetcode.com/problems/<slug>/
 
-Problem: <one or two lines, in your own words — not copy-pasted>
+Problem: Problem description
 
 Approach: <name the pattern: hash set, two pointers, monotonic stack, ...>
     <Why this data structure? What does it buy you over the naive
@@ -28,7 +30,5 @@ if __name__ == "__main__":
 
     # assert s.methodName([...]) is True
     # assert s.methodName([...]) is False
-    # assert s.methodName([]) is False     # edge: empty
-    # assert s.methodName([1]) is False    # edge: single element
 
     print("passed")
